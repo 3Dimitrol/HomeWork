@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Work_h_2_4 {
     // Сумма четных положительных элементов массива
-    public static void positiveElements(int[] arr1) {
+    public static int positiveElements(int[] arr1) {
         int[] ork = new int[arr1.length];
 
 
@@ -28,14 +28,15 @@ public class Work_h_2_4 {
         }
         if (num == 0) {
             System.out.print("В заданном массиве, нет четных чисел. Сумаа равна 0");
-            return;
+            return 0;
         }
         System.out.print("Сумма четных положительных элементов массива = " + num);
         System.out.println();
+        return num;
     }
 
     // Максимальный элемент массива с четным индексом
-    public static void maxElement(int[] arr2) {
+    public static int maxElement(int[] arr2) {
         int[] ork = new int[arr2.length];
 
 
@@ -67,9 +68,10 @@ public class Work_h_2_4 {
         }
         System.out.print("Максимальный элемент массива с четным индексом : " + pol);
         System.out.println();
+        return pol;
     }
     // Элементы массива, которые меньше среднего арифметического
-    public static void med(int[] arr3) {
+    public static int med(int[] arr3) {
 
             System.out.print("Заданный массив : ");
         for (int bok : arr3) {
@@ -92,10 +94,11 @@ public class Work_h_2_4 {
 
         }
         System.out.println();
+        return medium;
     }
 
     //Найти два наименьших (минимальных) элемента массива
-    public static void min_min(int[] arr4) {
+    public static int[] min_min(int[] arr4) {
 
         System.out.print("Заданный массив : ");
         for (int bok : arr4) {
@@ -124,15 +127,16 @@ public class Work_h_2_4 {
         }
         System.out.println("Первый минимальный символ : " + min1);
         System.out.println("Второй минимальный символ : " + min2);
+        return new int[]{min1, min2};
     }
 
     //Сжать массив, удалив элементы, принадлежащие интервалу
-    public static void compression(int[] arr5) {
-        Scanner ram = new Scanner(System.in);
-        System.out.print("Введите интервал чисел : \nОт : ");
-        int ot = ram.nextInt();
-        System.out.print("До : ");
-        int doo = ram.nextInt();
+    public static int[] compression(int[] arr5) {
+       // Scanner ram = new Scanner(System.in);
+       // System.out.print("Введите интервал чисел : \nОт : ");
+        int ot = 10;
+       // System.out.print("До : ");
+        int doo = 40;
 
         int[] ork = new int[arr5.length];
 
@@ -153,6 +157,7 @@ public class Work_h_2_4 {
         }
         System.out.println();
 
+
         int j = 0;
         for (int i = 0; i < arr5.length; i++) {
             if(arr5[i] > 0){
@@ -165,10 +170,12 @@ public class Work_h_2_4 {
             System.out.print(bok + " ");
         }
         System.out.println();
+       // return arr5;
+        return ork;
     }
 
    //Сумма цифр массива
-    public static void amount(int[] arr6) {
+    public static int amount(int[] arr6) {
 
         System.out.print("Заданный массив : ");
         for (int bok : arr6) {
@@ -188,16 +195,18 @@ public class Work_h_2_4 {
         }
         System.out.print("Сумма чисел массива = " + first);
         System.out.println();
+        return first;
     }
 
     public static void main(String[] args) {
-        int[] arrays = ArraysUtils.arrayRandom(50, 100);
+        int[] arrays = {71,25,6,9,10,2,6,0,48};
         Work_h_2_4.positiveElements(arrays);
         Work_h_2_4.maxElement(arrays);
         Work_h_2_4.med(arrays);
         Work_h_2_4.min_min(arrays);
         Work_h_2_4.amount(arrays);
         Work_h_2_4.compression(arrays);
+        Work_h_2_4.amount(arrays);
 
 
     }

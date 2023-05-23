@@ -4,8 +4,8 @@ package home_work_1;
 
 public class Work4_1BranchingOperator {
     public static void main(String[] args) {
-        int a = 11; // Данные вводимые пользователем
-        int b = 18; // Данные вводимые пользователем
+        int a = 15; // Данные вводимые пользователем
+        int b = 13; // Данные вводимые пользователем
 
         if ((a % 2) != 0)  {
             System.out.println(a + " - является нечетным числом");

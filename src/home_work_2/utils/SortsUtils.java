@@ -2,7 +2,7 @@ package home_work_2.utils;
 
 public class SortsUtils {
 //Данный метод сортирует переданный ему массив при помощи алгоритма пузырьковая сортировка.
-    public static void sort(int[] arr){
+    public static int[] sort(int[] arr){
 
         for (int i = 0; i < arr.length; i++) {
             for(int k = arr.length - 1; k > i; k--){
@@ -13,10 +13,11 @@ public class SortsUtils {
                 }
             }
         }
+        return arr;
     }
 
     //Данный метод сортирует переданный ему массив при помощи алгоритма шейкерная сортировка.
-    public static void shake(int[] arr){
+    public static int[] shake(int[] arr){
 
         int l = 0;
         int r = arr.length - 1;
@@ -42,5 +43,6 @@ public class SortsUtils {
             }
             l++;
         }
+        return arr;
     }
 }

@@ -1,11 +1,11 @@
 package home_work_2.loops;
 
 public class Work_h_11 {
-    public static void main(String[] args) {
+    public static long add(String x1) { // x1 = "8";
 
-        int jou = Integer.parseInt(args[0]);  //Переводим String в int
+        int jou = Integer.parseInt(x1);  //Переводим String в int
         if (jou > 20 || jou < 0){             //Проверяем, корректное ли число ввели через аргумент
-            System.out.print("Вы ввели некорректные данные. \nНачните сначала и введите число от 0 до 20 ");
+            return jou;
 
         } else {
             long moon = 1; // Создаем переменную, в которую будет собрано произведение всех чисел
@@ -13,11 +13,10 @@ public class Work_h_11 {
                 moon = moon * i;
                 if (i < jou) {
                     System.out.print(i + " * ");
-
-                } else {
-                    System.out.print(jou + " = " + moon);
                 }
+
             }
+            return moon;
         }
     }
 }

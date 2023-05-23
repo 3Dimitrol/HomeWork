@@ -1,28 +1,30 @@
 package home_work_1;
 
-import java.util.Scanner;
+import home_work_3.calcs.api.ICommunicationPrinter;
 
-public class Work6_1_NameUser {
-    public static void main(String[] args) {
+//import java.util.Scanner;
 
-        Scanner name = new Scanner(System.in);
+public class Work6_1_NameUser implements ICommunicationPrinter {
+    public String welcome(String nameFirst) {
+
+     /*   Scanner name = new Scanner(System.in);
         System.out.print("Как вас зовут?  -  ");
-        String nameUser = name.nextLine();
+        String nameUser = name.nextLine(); */
 
-        if((nameUser.equalsIgnoreCase("Вася")) || (nameUser.equalsIgnoreCase("Анастасия")) || (nameUser.equalsIgnoreCase("Дмитрий"))){
-            if ((nameUser.equalsIgnoreCase("Вася")) || (nameUser.equalsIgnoreCase("Анастасия"))) {
-                if ((nameUser.equalsIgnoreCase("Вася"))){
-                    System.out.println("Привет! \nЯ тебя так долго ждал");
+        if((nameFirst.equalsIgnoreCase("Вася")) || (nameFirst.equalsIgnoreCase("Анастасия")) || (nameFirst.equalsIgnoreCase("Дмитрий"))){
+            if ((nameFirst.equalsIgnoreCase("Вася")) || (nameFirst.equalsIgnoreCase("Анастасия"))) {
+                if ((nameFirst.equalsIgnoreCase("Вася"))){
+                   return "Привет! \nЯ тебя так долго ждал";
                 }else{
-                    System.out.println("Я тебя так долго ждал");
+                    return  "Я тебя так долго ждал";
                 }
 
             } else {
-                System.out.println("Добро пожаловать, господин! \nМы вам рады!");
+                return "Добро пожаловать, господин! \nМы вам рады!";
             }
 
             }else{
-                System.out.println("Добрый день, а вы кто?!");
+                return "Добрый день, а вы кто?!";
             }
 
     }

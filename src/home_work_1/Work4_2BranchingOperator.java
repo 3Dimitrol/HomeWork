@@ -2,6 +2,10 @@ package home_work_1;
 
 // Среди всех чисел надо найти среднее
 
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 public class Work4_2BranchingOperator {
     public static void main(String[] args) {
 
@@ -15,7 +19,7 @@ public class Work4_2BranchingOperator {
         } else if (b == c) {
             System.out.println("Два символова равны, задача не имеет смысла, зачем ты так?"); // Проверка данных, на равенство
 
-        } else   if (a == b)  {
+        } else if (a == b) {
             System.out.println("Два символова равны, задача не имеет смысла, зачем ты так?"); // Проверка данных, на равенство
 
         } else if ((a < b && a > c) || (a < c && a > b)) {
@@ -32,3 +36,5 @@ public class Work4_2BranchingOperator {
         }
     }
 }
+
+

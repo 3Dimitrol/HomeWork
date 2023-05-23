@@ -1,32 +1,33 @@
 package home_work_1;
 
-import java.util.Scanner;
+import home_work_3.calcs.api.ICommunicationPrinter;
 
-public class Work6_3_NameUser {
-    public static void main(String[] args) {
+// import java.util.Scanner;
 
-        Scanner name = new Scanner(System.in);
+public class Work6_3_NameUser implements ICommunicationPrinter {
+    public String welcome(String nameFirst) {
+
+     /*   Scanner name = new Scanner(System.in);
         System.out.print("Как вас зовут?  -  ");
-        String nameUser = name.nextLine();
+        String nameUser = name.nextLine(); */
 
-        switch (nameUser){
+        switch (nameFirst){
             case "Вася":
             case "вася":
             case "Василий":
             case "василий":
-                System.out.println("Привет! \nЯ тебя так долго ждал");
-                break;
+                return "Привет! \nЯ тебя так долго ждал";
+
             case "Анастасия":
             case "анастасия":
             case "Настя":
             case "настя":
-                System.out.println("Я тебя так долго ждал");
-                break;
+                return "Я тебя так долго ждал";
+
             case "Дмитрий":
-                System.out.println("Добро пожаловать, господин! \nМы вам рады!");
-                break;
+                return "Добро пожаловать, господин! \nМы вам рады!";
             default:
-                System.out.println("Добрый день, а вы кто?!");
+                return "Добрый день, а вы кто?!";
         }
     }
 }
