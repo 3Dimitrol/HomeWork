@@ -4,19 +4,44 @@ import home_work_3.calcs.simple.CalculatorWithMathCopy;
 
 public class CalculatorWithCounterAutoComposite {
 
-    public CalculatorWithCounterAutoComposite(){
-       setCounter3(getCounter3() + 1);
+
+    private int counter3;
+
+    private CalculatorWithMathCopy b = new CalculatorWithMathCopy();
+
+  /*  public CalculatorWithCounterAutoComposite() {
+        this.b = new CalculatorWithMathCopy();
+    }*/
+
+    public double div(double x1, double x2){
+
+        incrementCountOperation();
+
+        return b.div(x1, x2);
     }
-public CalculatorWithMathCopy b = new CalculatorWithMathCopy();
 
-    protected int counter3 = 0;
+    // Умножение
+    public double mul(double x1, double x2){
 
-    public int getCounter3() {
-        return counter3;
+        incrementCountOperation();
+
+        return b.mul(x1, x2);
     }
 
-    public void setCounter3(int counter3) {
-        this.counter3 = counter3;
+    // Вычитание
+    public double sub(double x1, double x2){
+
+        incrementCountOperation();
+
+        return b.sub(x1, x2);
+    }
+
+    // Сложение
+    public double add(double x1, double x2){
+
+        incrementCountOperation();
+
+        return b.add(x1, x2);
     }
 
     public double degree(double x1, int x2){
@@ -24,13 +49,18 @@ public CalculatorWithMathCopy b = new CalculatorWithMathCopy();
             return 0;
         } else {
 
-            return Math.pow(x1, x2);
+            incrementCountOperation();
+
+            return b.degree(x1, x2);
         }
+
     }
 
     public double module(double number){
 
-        return Math.abs(number);
+        incrementCountOperation();
+
+        return b.module(number);
     }
 
     public double root(double number) {
@@ -39,12 +69,18 @@ public CalculatorWithMathCopy b = new CalculatorWithMathCopy();
             return 0;
         } else {
 
-            return Math.sqrt(number);
+            incrementCountOperation();
+
+            return b.root(number);
         }
     }
 
+    public void incrementCountOperation(){
+        counter3++;
+    }
+
    public long getCountOperation(){
-        return getCounter3();
+        return counter3;
     }
 
 }

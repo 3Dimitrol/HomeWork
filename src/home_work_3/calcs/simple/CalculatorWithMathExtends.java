@@ -5,6 +5,8 @@ import home_work_3.calcs.api.ICalculator;
 public class CalculatorWithMathExtends extends CalculatorWithOperator implements ICalculator {
 
 
+
+    @Override
     public double degree(double x1, int x2){
         if (x1 < 0){
             return 0;
@@ -15,11 +17,15 @@ public class CalculatorWithMathExtends extends CalculatorWithOperator implements
 
     }
 
+
+    @Override
     public double module(double number){
 
         return Math.abs(number);
     }
 
+
+    @Override
     public double root(double number) {
 
         if (number < 0){

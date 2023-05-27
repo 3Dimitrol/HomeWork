@@ -5,7 +5,7 @@ import home_work_3.calcs.simple.CalculatorWithMathExtends;
 
 public class CalculatorWithCounterClassic extends CalculatorWithMathExtends {
 
-    protected int сounter = 0;
+    private int сounter;
 
     public int getСounter() {
         return сounter;
@@ -16,7 +16,7 @@ public class CalculatorWithCounterClassic extends CalculatorWithMathExtends {
     }
 
     public void incrementCountOperation(){
-        setСounter(getСounter() + 1);
+        setСounter(getСounter() + 1);   // counter ++
 
     }
 

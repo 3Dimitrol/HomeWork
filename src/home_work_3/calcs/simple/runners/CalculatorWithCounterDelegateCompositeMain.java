@@ -10,7 +10,12 @@ public class CalculatorWithCounterDelegateCompositeMain {
 
       //  4.1 + 15 * 7 + (28 / 5) ^ 2
 
-        double result = comp.b.add(comp.b.add(4.1, comp.b.mul(15, 7)), comp.degree(comp.b.div(28, 5), 2));
+        double div = comp.div(28, 5);
+        double degree = comp.degree(div, 2);
+        double mul = comp.mul(15, 7);
+        double add = comp.add(4.1, mul);
+        double result = comp.add(add, degree);
+
 
         System.out.println("4.1 + 15 * 7 + (28 / 5) ^ 2 = " + result);
         System.out.print("Калькулятор использовался : " + comp.getCountOperation() + " раз");  // Я не понимаю как создать счетчик на калькулятор, а не на методы

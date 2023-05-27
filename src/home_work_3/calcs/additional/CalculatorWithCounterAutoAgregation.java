@@ -4,31 +4,83 @@ import home_work_3.calcs.simple.CalculatorWithMathCopy;
 
 public class CalculatorWithCounterAutoAgregation{
 
+    private int counter8;
 
+    private CalculatorWithMathCopy calculator;
 
-
-
-    public CalculatorWithCounterAutoAgregation(CalculatorWithMathCopy g){
-
+    public CalculatorWithCounterAutoAgregation(CalculatorWithMathCopy calculator) {
+        this.calculator = calculator;
     }
 
 
-    int counter8 = 0;
+    public double div(double x1, double x2){
 
-    public int getCounter8() {
+        incrementCountOperation();
 
+        return calculator.div(x1, x2);
+    }
+
+    // Умножение
+    public double mul(double x1, double x2){
+
+        incrementCountOperation();
+
+        return calculator.mul(x1, x2);
+    }
+
+    // Вычитание
+    public double sub(double x1, double x2){
+
+        incrementCountOperation();
+
+        return calculator.sub(x1, x2);
+    }
+
+    // Сложение
+    public double add(double x1, double x2){
+
+        incrementCountOperation();
+
+        return calculator.add(x1, x2);
+    }
+
+    public double degree(double x1, int x2){
+        if (x1 < 0){
+            return 0;
+        } else {
+
+            incrementCountOperation();
+
+            return calculator.degree(x1, x2);
+        }
+
+    }
+
+    public double module(double number){
+
+        incrementCountOperation();
+
+        return calculator.module(number);
+    }
+
+    public double root(double number) {
+
+        if (number < 0){
+            return 0;
+        } else {
+
+            incrementCountOperation();
+
+            return calculator.root(number);
+        }
+    }
+
+    public void incrementCountOperation(){
+        counter8++;
+    }
+
+    public long getCountOperation(){
         return counter8;
-    }
-
-    public void setCounter8(int counter8) {
-        this.counter8 = counter8;
-    }
-
-
-
-public long getCountOperation(){
-
-    return getCounter8();
     }
 
 }

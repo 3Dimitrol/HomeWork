@@ -4,7 +4,7 @@ import home_work_3.calcs.simple.CalculatorWithMathExtends;
 
 public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
 
-    protected int counter1 = 0;
+    private int counter1 = 0;
 
     public int getCounter1() {
         return counter1;
@@ -81,6 +81,7 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
     // Деление
     public double div(double x1, double x2){
 
+        setCounter1(getCounter1() + 1);
 
         return super.div(x1, x2);
     }
