@@ -43,3 +43,6 @@
 6)    SortsUtilsTest - Тестирует класс SortsUtils и его методы;
 
 7)    ICalculator - Тестирует все реализации ICalculator;
+
+8)    EasySearchTest - Тестирует созданные реализации интерфейса ISearchEngine;
+9)    WarAndPeaceTest - тестирует методы класса WarAndPeace;
