@@ -14,11 +14,8 @@ public class EasySearch implements ISearchEngine{
         int count = 0;
         int i = 0;
 
-        String chistka = text.toLowerCase().replaceAll("[^а-я А-Я 0-9]", " ");  // Добавил эту строку так как метод читал слова частично
-        String wordPlus =" " + (word.replaceAll("[^а-яА-Я]", "")) + " "; // Добавил эту строку так как метод читал слова частично
-
         while (i >= 0) {
-            i = chistka.indexOf(wordPlus, i);
+            i = text.indexOf(word, i);
 
             if (i >= 0) {
                 count++;
